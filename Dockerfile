@@ -28,6 +28,7 @@ RUN npm install
 
 # Copy built files from builder stage
 COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/vite.config.ts ./vite.config.ts
 
 # Expose port
 EXPOSE 3009
