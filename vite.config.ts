@@ -19,5 +19,8 @@ export default defineConfig(({mode}) => {
       hmr: process.env.DISABLE_HMR !== 'true',
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },
+    preview: {
+      allowedHosts: ['proyecto-savio.fundasaberesorg.com'],
+    },
   };
 });
