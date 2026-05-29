@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+    image: proyecto-final-front:latest
+    ports:
+      - "3009:3009"
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped

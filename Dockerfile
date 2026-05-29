@@ -29,11 +29,8 @@ RUN npm ci --omit=dev
 # Copy built files from builder stage
 COPY --from=builder /app/dist ./dist
 
-# Copy server file if it exists
-COPY --from=builder /app/server.js ./server.js 2>/dev/null || true
-
 # Expose port
-EXPOSE 3000
+EXPOSE 3009
 
 # Set environment to production
 ENV NODE_ENV=production
