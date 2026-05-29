@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --radius-xl: 22px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+}
+
+:root {
+  --white: #ffffff;
+  --bg: #ffffff;
+  --primary: #288CFF;
+  --primary-light: #E0F0FF;
+  --primary-glow: rgba(40, 140, 255, 0.12);
+  --primary-dark: #1E6BCC;
+  --black: #000000;
+  --text: #000000;
+  --text-secondary: #222222;
+  --text-muted: #6b7280;
+  --danger: #dc2626;
+  --danger-light: #fef2f2;
+  --danger-glow: rgba(220, 38, 38, 0.2);
+  --warning: #ea580c;
+  --warning-light: #fff7ed;
+  --warning-glow: rgba(234, 88, 12, 0.2);
+  --success: #16a34a;
+  --border: rgba(0,0,0,0.3);
+  --border-light: rgba(0,0,0,0.15);
+  --border-strong: rgba(0,0,0,0.5);
+  --shadow-xs: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-sm: 0 6px 18px rgba(0,0,0,0.08);
+  --shadow: 0 18px 60px rgba(0,0,0,0.10);
+  --transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  --navbar-height: 52px;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100vh;
+}
+
+.block-card {
+  background: var(--white);
+  border: 2px solid var(--border-strong);
+  border-radius: var(--radius-xl);
+  padding: 1.2rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-xs);
+}
+
+.block-card:hover {
+  border-color: rgba(0,0,0,0.7);
+  box-shadow: var(--shadow);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-hide::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.3);
+  border-radius: 2px;
+}
+
+.scrollbar-hide::-webkit-scrollbar-track {
+  background: transparent;
+}
